@@ -13,3 +13,10 @@ The command below will merge ``/data/swagger1.yaml`` ``/data/swagger2.yaml`` and
 
 
 Attention. The order of the files is important. The next file overwrites the same fields from the previous file.
+
+Docker.
+
+	docker run --rm -u $(id -u):$(id -g) -v $(pwd):/workdir -w /workdir emptyshadow/go-swagger-merger \
+        -o swagger.yaml \
+	  swagger1.yaml \
+	  swagger2.yaml
